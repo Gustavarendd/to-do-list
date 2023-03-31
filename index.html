@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <template id="tooltip">
+      <h2>More Info:</h2>
+      <p></p>
+    </template>
+    <template id="modal-template">
+      <div class="backdrop"></div>
+      <div id="form" class="modal"></div>
+    </template>
+    <header id="main-header">
+      <h1>To Do List</h1>
+    </header>
+
+    <section id="active-projects">
+      <header>
+        <h2>Active</h2>
+      </header>
+      <ul>
+        <li
+          id="p1"
+          data-extra-info="Got a lifetime, but would be nice to finish it soon!"
+          class="card"
+          draggable="true"
+        >
+          <h2>Finish the Project</h2>
+          <p>Finish the project within the next two weeks.</p>
+          <button class="alt">More Info</button>
+          <button>Finish</button>
+        </li>
+        <li
+          id="p2"
+          data-extra-info="Not really a business topic but still important."
+          class="card"
+          draggable="true"
+        >
+          <h2>Buy Groceries</h2>
+          <p>Don't forget to pick up groceries today.</p>
+          <button class="alt">More Info</button>
+          <button>Finish</button>
+        </li>
+      </ul>
+    </section>
+    <section id="finished-projects">
+      <header>
+        <h2>Finished</h2>
+      </header>
+      <ul>
+        <li
+          id="p3"
+          data-extra-info="Super important conference! Fictional but still!"
+          class="card"
+          draggable="true"
+        >
+          <h2>Book Hotel</h2>
+          <p>
+            Conference takes place in December, don't forget to book a hotel.
+          </p>
+          <button class="alt">More Info</button>
+          <button>Activate</button>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <button class="add-to-do-button">Add New to do</button>
+    </footer>
+  </body>
+</html>
