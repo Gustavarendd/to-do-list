@@ -53,6 +53,14 @@ export class addToDoForm {
     submit.type = 'submit';
     submit.textContent = 'Add';
 
+    const cancel = document.createElement('button');
+    cancel.type = 'button';
+    cancel.textContent = 'Cancel';
+    cancel.className = 'alt';
+    cancel.addEventListener('click', () => {
+      this.hide();
+    });
+
     form.className = 'form';
     form.appendChild(titleLabel);
     form.appendChild(titleInput);
@@ -61,6 +69,7 @@ export class addToDoForm {
     form.appendChild(moreInfoLabel);
     form.appendChild(moreInfoInput);
     form.appendChild(submit);
+    form.appendChild(cancel);
 
     form.addEventListener('submit', event => {
       event.preventDefault();
